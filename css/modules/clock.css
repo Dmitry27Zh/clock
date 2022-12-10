@@ -15,6 +15,7 @@
   z-index: 1;
   position: absolute;
   inset: 0.5em;
+  font-size: 1.2em;
   text-align: center;
   transform: rotate(calc(var(--angle) * 1deg));
 }
