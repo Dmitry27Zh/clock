@@ -6,8 +6,24 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background: linear-gradient(to right, hsl(200, 100%, 50%), hsl(175, 100%, 50%));
+}
+
+.wrapper {
+  display: grid;
+  align-items: center;
+  height: 100%;
+  padding-block: 40px;
+}
+
+.container {
+  padding: 0 min(20px, 4vw);
 }

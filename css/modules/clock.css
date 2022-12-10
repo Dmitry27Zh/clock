@@ -1,4 +1,63 @@
 .clock {
-  width: 300px;
-  height: 300px;
+  position: relative;
+  width: min(20em, 100%);
+  aspect-ratio: 1 / 1;
+  margin-inline: auto;
+  font-size: min(16px, 5vw);
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  border: 2px solid #000000;
+  overflow: hidden;
+}
+
+.clock .number {
+  --angle: 0;
+  position: absolute;
+  inset: 0.5em;
+  text-align: center;
+  transform: rotate(calc(var(--angle) * 1deg));
+}
+
+.clock .number-1 {
+  --angle: 30;
+}
+
+.clock .number-2 {
+  --angle: 60;
+}
+
+.clock .number-3 {
+  --angle: 90;
+}
+
+.clock .number-4 {
+  --angle: 120;
+}
+
+.clock .number-5 {
+  --angle: 150;
+}
+
+.clock .number-6 {
+  --angle: 180;
+}
+
+.clock .number-7 {
+  --angle: 210;
+}
+
+.clock .number-8 {
+  --angle: 240;
+}
+
+.clock .number-9 {
+  --angle: 270;
+}
+
+.clock .number-10 {
+  --angle: 300;
+}
+
+.clock .number-11 {
+  --angle: 330;
 }
