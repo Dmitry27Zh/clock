@@ -12,6 +12,7 @@
 
 .clock .number {
   --angle: 0;
+  z-index: 1;
   position: absolute;
   inset: 0.5em;
   text-align: center;
@@ -60,4 +61,49 @@
 
 .clock .number-11 {
   --angle: 330;
+}
+
+.clock .hand {
+  --angle: 0;
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  background: #000000;
+  border: 1px solid #ffffff;
+  border-top-left-radius: 0.6em;
+  border-top-right-radius: 0.6em;
+  transform: translateX(-50%) rotate(calc(var(--angle) * 1deg));
+  transform-origin: 50% 100%;
+}
+
+.clock .hand.second {
+  --angle: 30;
+  width: 0.2em;
+  height: calc(50% - 0.8em);
+  background: red;
+}
+
+.clock .hand.minute {
+  --angle: 60;
+  width: 0.4em;
+  height: calc(50% - 1em);
+}
+
+.clock .hand.hour {
+  --angle: 90;
+  width: 0.6em;
+  height: calc(50% - 1.2em);
+}
+
+.clock::after {
+  position: absolute;
+  z-index: 10;
+  inset: 0;
+  width: min(7%, 1.5em);
+  aspect-ratio: 1 / 1;
+  margin: auto;
+  background: #000000;
+  border-radius: 50%;
+  content: '';
 }
